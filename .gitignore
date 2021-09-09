@@ -1,1 +1,4 @@
-myprivatecreds.*
+.idea
+vendor/
+.env
+.vscodegit 
