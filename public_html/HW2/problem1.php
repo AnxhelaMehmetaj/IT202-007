@@ -11,7 +11,7 @@ function processArray($arr) {
     echo $arr[$i]. ""; 
     }
 }
-echo "Problem 1: Odd Output<br>";
+echo "Problem 1: Odd Output <br>";
 ?>
 <table>
     <thread>
