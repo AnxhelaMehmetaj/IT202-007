@@ -46,4 +46,5 @@ echo "Problem 1: Odd Output <br>";
         border-right: solid 1px black;
         border-left: solid 1px black;
     }
+    
 </style>
