@@ -8,5 +8,6 @@ if(isset($_SESSION["user"]) && isset($_SESSION["user"]["email"])){
 }
 else{
   echo "You're not logged in";
+  
 }
 ?>
