@@ -1,6 +1,6 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-
+reset_session();
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
