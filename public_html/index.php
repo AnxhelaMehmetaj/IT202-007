@@ -1,5 +1,4 @@
-
 <?php
-echo "it works! good job!!!";
 
-?>
+die(header("Location: login.php"));
+
