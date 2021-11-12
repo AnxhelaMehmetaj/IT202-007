@@ -2,7 +2,7 @@
 ## Project Summary: This project will create a simple e-commerce site for users.
 ## Github Link: (Prod Branch of Project Folder)
 ## Project Board Link: https://github.com/AnxhelaMehmetaj/IT202-007/projects/1
-## Website Link: https://am2997-dev.herokuapp.com/public_html/Project/register.php
+## Website Link: https://am2997-prod.herokuapp.com/Project/home.php
 ## Your Name: Anxhela Mehmetaj
 
 <!--
