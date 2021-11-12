@@ -17,6 +17,7 @@ if (($localWorks && $domain == "localhost") || $domain != "localhost") {
         "secure" => true,
         "httponly" => true,
         "samesite" => "lax"
+
     ]);
 }
 session_start();
