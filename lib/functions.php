@@ -66,7 +66,7 @@ function get_username()
 function get_user_email()
 {
     if (is_logged_in()) { //we need to check for login first because "user" key may not exist
-        return se($_SESSION["user"], "email", "", false);
+        //return se($_SESSION["user"], "email", "", false);
     }
     return "";
 }
@@ -119,4 +119,14 @@ function users_check_duplicate($errorInfo)
         //TODO come up with a nice error message
         flash("<pre>" . var_export($errorInfo, true) . "</pre>");
     }
+}
+function get_url($dest)
+{
+    global $BASE_PATH;
+    if (str_starts_with($dest, "/")) {
+        //handle absolute path
+        return $dest;
+    }
+    //handle relative path
+    return $BASE_PATH . $dest;
 }
