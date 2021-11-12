@@ -76,7 +76,7 @@
 - [x] (11/01/2021 of completion) Basic security rules implemented
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: 
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
@@ -84,61 +84,71 @@
           - Screenshot #1 Function to check if user is logged in
       - Screenshot #2 ![image](https://user-images.githubusercontent.com/45404657/141393946-f5413529-d342-4c68-a565-3fdf90e87cd0.png)
           - Screenshot #2 should login in first. 
-      - Screenshot #3 ![image](https://user-images.githubusercontent.com/45404657/141394501-24ea1a13-1fcc-4aef-8cce-4a8b0e901fdd.png)
-          - Screenshot #3 Roles table
-      - Screenshot #4 ![image](https://user-images.githubusercontent.com/45404657/141394539-d156b710-e478-4e02-992c-b6df655fb347.png)
-          - Screenshot #4 User Roles
+      
 
-
-- [ ] (11/01/2021 of completion) Basic Roles implemented
+- [x] (11/02/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/61
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+     - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/141394501-24ea1a13-1fcc-4aef-8cce-4a8b0e901fdd.png)
+          - Screenshot #1 Roles table
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/45404657/141394539-d156b710-e478-4e02-992c-b6df655fb347.png)
+          - Screenshot #2 User Roles
 
- - [ ] (11/01/2021 of completion) Site should have basic styles/theme applied; everything should be styled
+
+ - [x] (11/01/2021 of completion) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/57
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/141397503-05459bad-a092-4605-acd4-ec15a6d8b2db.png)
+        - Screenshot #1 Background and navbar color and style changed 
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/45404657/141397693-1d4bc946-3883-462d-bd2c-cbad85834490.png)
+        - Screenshot #2 Create role theme 
+      - Screenshot #3 ![image](https://user-images.githubusercontent.com/45404657/141398431-987d241b-9112-43e3-abb3-c25b43bfb375.png)
+        - Screenshot #3 Bootstrap added
 
-- [ ] (11/01/2021 of completion) Any output messages/errors should be “user friendly”
+
+- [x] (11/02/2021 of completion) Any output messages/errors should be “user friendly”
    -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/57
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/141397770-44b99fb4-60d6-4dae-b6a2-dd3687880a55.png)
+        - Screenshot #1 No technical error 
 
-- [ ] (11/01/2021 of completion) User will be able to see their profile
+
+- [x] (11/02/2021 of completion) User will be able to see their profile
    - List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/57
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/141397601-0846cf6b-17ad-479f-b6e1-c65bf6643a46.png)
+        - Screenshot #1 Profile form
 
 - [ ] (11/01/2021 of completion) User will be able to edit their profile
    - List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 (https://github.com/AnxhelaMehmetaj/IT202-007/pull/57
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/141399104-2247a513-588e-4900-985f-8953a00c8bdd.png)
+       - Screenshot #1 Password is not properly validated
+      - Screenshot #1![image](https://user-images.githubusercontent.com/45404657/141399363-0e50ea3f-c7f7-4052-94d7-c93f3cf91e38.png)
+        - Screenshot #1username is checked and it not available 
+       - Screenshot #1![image](https://user-images.githubusercontent.com/45404657/141399672-ddd125a8-8937-4fb1-a86b-85ca30f18b9a.png)
+        - Screenshot #1Checking if the email exists 
+
 
 
 
