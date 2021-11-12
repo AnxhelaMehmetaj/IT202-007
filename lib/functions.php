@@ -66,7 +66,7 @@ function get_username()
 function get_user_email()
 {
     if (is_logged_in()) { //we need to check for login first because "user" key may not exist
-        return se($_SESSION["user"], "email", "", false);
+        //return se($_SESSION["user"], "email", "", false);
     }
     return "";
 }
