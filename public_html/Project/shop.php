@@ -31,7 +31,7 @@ if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
 }
 //paginate function
-$per_page = 3;
+$per_page = 10;
 paginate($total_query . $query, $params, $per_page);
 //get the total
 /* this comment block has been replaced by paginate()
@@ -76,7 +76,7 @@ try {
 
 <div class="container-fluid">
     <h1>Shop</h1>
-    <form method= "POST" class="row row-cols-auto g-3 align-items-center">
+    <form  class="row row-cols-auto g-3 align-items-center">
         <div class="col">
             <div class="input-group">
                 <div class="input-group-text">Name</div>
@@ -87,12 +87,12 @@ try {
             <div class="input-group">
                 <div class="input-group-text">Sort</div>
                 <!-- make sure these match the in_array filter above-->
-                <input class="form-control" name="unit_cost"  <?php se($col); ?> />
-               <!--   <select class="form-control" name="col" value=" ?>">
+             
+                <select class="form-control" name="col" value=" ?>">
                     <option value="unit_price">Unit Price </option>
                   <option value="stock">Stock</option>
                     <option value="name">Name</option>
-                    <option value="created">Created</option>-->
+                    <option value="created">Created</option>
                 </select> 
                 <script>
                     //quick fix to ensure proper value is selected since

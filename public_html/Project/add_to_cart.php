@@ -24,9 +24,9 @@ if(!is_logged_in()){
     }
     $unit_cost = $result["unit_price"];
     $product_name = $result["name"];
-   echo var_export($result, true);
+   //echo var_export($result, true);
     if (isset($_POST["submit"])) {
-        $stmt = $db->prepare("INSERT INTO cart (product_id, user_id, desired_quantity, unit_cost) VALUES(:product_id, :user_id, :desired_quantity, :unit_cost)");
+        $stmt = $db->prepare("INSERT INTO cart (product_id, user_id, desired_quantity, unit_cost) VALUES(:product_id, :user_id, :desired_quantity, :unit_cost) on DUPLICATE KEY UPDATE desired_quantity=desired_quantity + :desired_quantity");
         try {
             $stmt->execute([":product_id" => $product_id, ":user_id" => $user_id, ":desired_quantity" => $desired_quantity, ":unit_cost" => $unit_cost]);
             flash("Added to cart");
