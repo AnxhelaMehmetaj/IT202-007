@@ -240,7 +240,7 @@ function add_item($item_id, $user_id, $quantity = 1)
         return;
     }
     $db = getDB();
-    $stmt = $db->prepare("INSERT INTO BGD_Inventory (item_id, user_id, quantity) VALUES (:iid, :uid, :q) ON DUPLICATE KEY UPDATE quantity = quantity + :q");
+    $stmt = $db->prepare("INSERT INTO product_Inventory (item_id, user_id, quantity) VALUES (:iid, :uid, :q) ON DUPLICATE KEY UPDATE quantity = quantity + :q");
     try {
         //if using bindValue, all must be bind value, can't split between this an execute assoc array
         $stmt->bindValue(":q", $quantity, PDO::PARAM_INT);
@@ -253,29 +253,6 @@ function add_item($item_id, $user_id, $quantity = 1)
     }
     return false;
 }
-function record_purchase($item_id, $user_id, $quantity, $cost)
-{
-    //I'm using negative values for predefined items so I can't validate >= 0 for item_id
-    if (/*$item_id <= 0 ||*/$user_id <= 0 || $quantity === 0) {
-        error_log("record_purchase() Item ID: $item_id, User_id: $user_id, Quantity $quantity");
-        return;
-    }
-    $db = getDB();
-    $stmt = $db->prepare("INSERT INTO BGD_PurchaseHistory (item_id, user_id, quantity, unit_cost) VALUES (:iid, :uid, :q, :uc)");
-    try {
-        $stmt->execute([":iid" => $item_id, ":uid" => $user_id, ":q" => $quantity, ":uc" => $cost]);
-        return true;
-    } catch (PDOException $e) {
-        error_log("Error recording purchase $quantity of $item_id for user $user_id: " . var_export($e->errorInfo, true));
-    }
-    return false;
-}
-
-/**
- * @param $query must have a column called "total"
- * @param array $params
- * @param int $per_page
- */
 function paginate($query, $params = [], $per_page = 10)
 {
     global $page; //will be available after function is called

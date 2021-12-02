@@ -25,7 +25,7 @@ function flash(message = "", color = "info") {
  * Used in AJAX calls to fetch the $_SESSION balance after a server side change
  * to update all the show-balance elements on the page w/o a page refresh
  */
-function refreshBalance () {
+ function refreshBalance () {
     fetch("api/get_balance.php", {
         method: "POST",
         headers: {
