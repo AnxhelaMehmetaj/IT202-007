@@ -33,9 +33,11 @@ reset_session();
     }
 </script>
 <?php
+    $email = se($_POST, "email", "", false);
+    $username = se($_POST, "username", "", false);
+
 //TODO 2: add PHP Code
 if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
-    $email = se($_POST, "email", "", false);
     $password = se($_POST, "password", "", false);
     $confirm = se(
         $_POST,
@@ -43,7 +45,6 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         "",
         false
     );
-    $username = se($_POST, "username", "", false);
     //TODO 3
     $hasError = false;
     if (empty($email)) {
