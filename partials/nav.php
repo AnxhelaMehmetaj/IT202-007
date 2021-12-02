@@ -46,7 +46,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('register.php'); ?>">Register</a></li>
                     
                 <?php endif; ?>
-                <li class="nav-item"><a class="nav-link" href="<?php echo get_url('shop.php'); ?>">shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
                 <?php if (has_role("Admin")) : ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="rolesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,8 +78,12 @@ require_once(__DIR__ . "/../lib/functions.php");
             </ul>
            
             <span class="navbar-text show-balance">
-            <div class="nav-item"><a class="nav-link" href="<?php echo get_url(''); ?>">Cart</a></div>
-            </span>
+            <div class="nav-item"><a class="nav-link" href="cart.php">Cart</a></div></span>
+            <?php 
+           
+            
+            
+            ?>
         </div>
     </div>
 </nav>
