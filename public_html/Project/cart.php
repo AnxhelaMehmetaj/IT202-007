@@ -26,11 +26,12 @@ try {
 <div class="container-fluid">
     <h1>Cart</h1>
     <?php
-       
-        echo('<div class="row row-cols-1 row-cols-md-5 g-4">');
+
+        $ids = [];
         echo("<form method='POST' class='form'><br>");
        
         foreach($results as $index => $record){
+            echo("<div class='cart_item'>");
             echo("<div class='cart_item'>");
             echo("<div class='card bg-dark'>");
 
@@ -80,7 +81,7 @@ try {
             echo("</div><br>");
             echo("</div>");
             echo("</div>");
-            echo("<input type='submit' name='clear_all' value='Empty cart' class='delete_button'/>");
+            echo("</div>");
         }
         echo("</form>")
 
