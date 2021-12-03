@@ -6,6 +6,7 @@ if(!is_logged_in()){
 }
 
 $results=[];
+$ids = [];
 $db=getDB();
 $stmt= $db ->prepare ("SELECT * from cart WHERE user_id = :user_id");
 try {
@@ -21,16 +22,17 @@ try {
 ?>
 
 
+
 <div class="container-fluid">
     <h1>Cart</h1>
     <?php
 
         $ids = [];
         echo("<form method='POST' class='form'><br>");
-        echo("<input type='submit' name='clear_all' value='Empty cart' class='delete_button'/>");
+       echo(" <div class='row row-cols-1 row-cols-md-5 g-4'>");
         foreach($results as $index => $record){
             echo("<div class='cart_item'>");
-            echo("<div class='cart_item'>");
+           
             echo("<div class='card bg-dark'>");
 
             echo("<div class='card-header'>
@@ -66,12 +68,15 @@ try {
                     echo($value);
                 }
             }
-            echo("Quantity: <input type='number' min='0' name='quantity". $id . "' value='" . $quantity . "'/><br>");
-            echo("<input type='submit' value='Submit' name='submit" . $id . "' /><br>");
-            echo("<input type='submit' value='Remove' name = 'remove" . $id . "' /><br>");
+
+            echo ("<br>");
             echo("Name: " . $name . "<br>");
             echo("Unit price: " . $cost . "<br>");
             echo("Total cost: " . $cost*$quantity . "<br>");
+            echo("Quantity: <input type='number' min='0' name='quantity". $id . "' value='" . $quantity . "'/><br>");
+            echo("<input type='submit' value='Submit' name='submit" . $id . "' /><br>");
+            echo("<input type='submit' value='Remove' name = 'remove" . $id . "' /><br>");
+            echo("<input type='submit' name='clear_all' value='Empty cart' class='delete_button'/>");
             
             echo("</div><br>");
             echo("</div>");
@@ -81,6 +86,20 @@ try {
         echo("</form>")
 
 ?>
+
+
+                    
+                   
+
+                    
+
+
+
+
+
+
+
+
 <?php
         if(isset($_POST["clear_all"])){
             $stmt = $db->prepare("DELETE FROM cart WHERE user_id = :user_id");
@@ -118,6 +137,9 @@ try {
         }
     ?>
 </div>
+
+
+
 <?php
 require_once(__DIR__ . "/../../partials/footer.php");
 ?>
