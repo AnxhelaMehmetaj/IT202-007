@@ -76,7 +76,7 @@ try {
             echo("Quantity: <input type='number' min='0' name='quantity". $id . "' value='" . $quantity . "'/><br>");
             echo("<input type='submit' value='Submit' name='submit" . $id . "' /><br>");
             echo("<input type='submit' value='Remove' name = 'remove" . $id . "' /><br>");
-            
+            echo("<input type='submit' name='clear_all' value='Empty cart' class='delete_button'/>");
             
             echo("</div><br>");
             echo("</div>");
