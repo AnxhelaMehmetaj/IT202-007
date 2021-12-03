@@ -16,7 +16,7 @@ if (!in_array($order, ["asc", "desc"])) {
 $name = se($_GET, "name", "", false);
 
 //split query into data and total
-$base_query = "SELECT id, name, description, unit_price, stock, image FROM products WHERE stock > 0 LIMIT 10 ";
+$base_query = "SELECT id, name, description, unit_price, stock, image FROM products  ";
 $total_query = "SELECT count(1) as total FROM products";
 //dynamic query
 $query = " WHERE 1=1"; //1=1 shortcut to conditionally build AND clauses
@@ -31,7 +31,7 @@ if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
 }
 //paginate function
-$per_page = 3;
+$per_page = 10;
 paginate($total_query . $query, $params, $per_page);
 //get the total
 /* this comment block has been replaced by paginate()
@@ -87,7 +87,7 @@ try {
             <div class="input-group">
                 <div class="input-group-text">Sort</div>
                 <!-- make sure these match the in_array filter above-->
-                <input class="form-control" name="unit_cost"  <?php se($col); ?> />
+             
                 <select class="form-control" name="col" value=" ?>">
                     <option value="unit_price">Unit Price </option>
                   <option value="stock">Stock</option>
@@ -141,10 +141,7 @@ try {
                   if(is_logged_in()){
                     echo('<a href="add_to_cart.php?id=');
                     se($item, 'id');
-                  echo('">Add to cart</a><br>');
-                      
-                  }
-                  
+                  echo('">Add to cart</a><br>');}
                   ?> 
                  
                         <!-- example form submit-->
