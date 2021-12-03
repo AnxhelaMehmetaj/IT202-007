@@ -153,10 +153,10 @@
 
 
 - Milestone 2
-- [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(11/30/2021 of completion) User with an admin role or shop owner role will be able to add products to inventory
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots

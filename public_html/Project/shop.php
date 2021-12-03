@@ -141,10 +141,7 @@ try {
                   if(is_logged_in()){
                     echo('<a href="add_to_cart.php?id=');
                     se($item, 'id');
-                  echo('">Add to cart</a><br>');
-                      
-                  }
-                  
+                  echo('">Add to cart</a><br>');}
                   ?> 
                  
                         <!-- example form submit-->
