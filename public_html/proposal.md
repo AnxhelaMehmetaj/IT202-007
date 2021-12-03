@@ -275,6 +275,59 @@
         - Screenshot #1 empty button to empty the card 
 
 - Milestone 3
+
+
+
+- Milestone 3
+
+# Project Name: simple shop
+## Project Summary: This project will create a simple e-commerce site for users.
+## Github Link: (Prod Branch of Project Folder)
+## Project Board Link: https://github.com/AnxhelaMehmetaj/IT202-007/projects/1
+## Website Link: https://am2997-prod.herokuapp.com/Project/home.php
+## Your Name: Anxhela Mehmetaj
+
+- [ ] (11/18/2021 of completion) User will be able to purchase items in their Cart
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+
+- [ ] (11/18/2021 of completion) Order Confirmation Page
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+
+- [ ] (11/18/2021 of completion) User will be able to see their Purchase History
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+
+- [ ] (11/18/2021 of completion) Store Owner will be able to see all Purchase History
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+
+
 - Milestone 4
 ### Intructions
 #### Don't delete this
