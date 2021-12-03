@@ -158,109 +158,121 @@
     - Status: Completed
     - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144540948-adc95c77-b5b9-41f1-a942-dae25d080e8a.png)
+      - Screenshot #1 Products table 
+      
+- [x] \(11/30/2021 of completion) Any user will be able to see products with visibility = true on the Shop pag
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/45404657/144541768-3659726d-b188-48aa-98e6-a6fa0d5e46f3.png)
+        - Screenshot #2 product list page is public 
+      - Screenshot #3 limit search to 10 
+        - Screenshot #3![image](https://user-images.githubusercontent.com/45404657/144542110-cac120db-13d1-4eb3-a867-0a4e9f0dda9d.png)
+      - Screenshot #4  ![image](https://user-images.githubusercontent.com/45404657/144542625-ee929c5e-df31-42e6-a5a4-869c51fd4031.png)
+         - Screenshot #4 Search by category, partial match, sort results by price 
+
+
+
+- [x ] \(11/30/2021 of completion) Admin/Shop owner will be able to see products with any visibility
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Pending Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144543487-f9d3b024-04d8-4ecf-8c45-de70391f00d1.png)
+        - Screenshot #1 admin is able to see all products 
+        
+- [x] \(11/30/2021 of completion) Admin/Shop owner will be able to edit any product
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144543794-c36888c7-4601-412d-a3ca-bb868612f778.png)
+      - Screenshot #1 Admin can edit products
+        
+- [x] \(11/30/2021 of completion) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 Product details page 
+        - Screenshot #1  ![image](https://user-images.githubusercontent.com/45404657/144544360-83a31b64-8bba-490e-9950-b3766713da88.png)
+
+       
+- [x] \(11/30/2021 of completion) User must be logged in for any Cart related activity below
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link:  https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1  https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144544640-7172fa8b-2fcf-4cff-9445-64abc85374dc.png)
+        - Screenshot #1 User must be logged in to add to cart 
+        
+        
+- [x] \(11/30/2021 of completion)User will be able to add items to Cart
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144544837-a72b3b33-3323-415e-a79a-f04b3b762ba0.png)
+        - Screenshot #1 cart table 
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/45404657/144544934-27bd8454-4973-499b-8b8b-309f87d28d9b.png)
+        - Screenshot #2 add items to cart 
+       
+- [x] \(11/30/2021 of completion) User will be able to see their cart
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144545276-63888f1c-cceb-4b85-9e11-e5e7e2476a58.png)
+        - Screenshot #1 Users can see their products at cart
+  
+- [x] \(11/30/2021 of completion) User will be able to change quantity of items in their cart
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144545590-331798a6-dc44-467c-9f9e-8799914afc3a.png)
+        - Screenshot #1 remove the items 
+      
+        
+- [x] \(11/30/2021 of completion) User will be able to remove a single item from their cart vai button click
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1  https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144545590-331798a6-dc44-467c-9f9e-8799914afc3a.png)
+        - Screenshot #1 remove item via submit button 
+        
+- [x] \(11/30/2021 of completion) User will be able to clear their entire cart via a button click
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/AnxhelaMehmetaj/IT202-007/pull/91
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-        - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144545590-331798a6-dc44-467c-9f9e-8799914afc3a.png)
+        - Screenshot #1 empty button to empty the card 
 
 - Milestone 3
 - Milestone 4
