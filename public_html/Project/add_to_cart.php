@@ -49,6 +49,8 @@ if(!is_logged_in()){
         </div>
         <div>
         <input class="btn btn-primary" type="submit" value="Add to cart" name="submit" />
+        
+
         </div>
     </form>
 

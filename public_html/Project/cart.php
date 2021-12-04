@@ -77,7 +77,8 @@ try {
             echo("<input type='submit' value='Submit' name='submit" . $id . "' /><br>");
             echo("<input type='submit' value='Remove' name = 'remove" . $id . "' /><br>");
             echo("<input type='submit' name='clear_all' value='Empty cart' class='delete_button'/>");
-            
+            echo("<br>");
+            echo("<input type='submit' name='payment_method' value='Continue to Checkout' class='add_payment_method '/>");
             echo("</div><br>");
             echo("</div>");
             echo("</div>");
