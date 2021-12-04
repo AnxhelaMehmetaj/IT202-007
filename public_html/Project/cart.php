@@ -25,19 +25,21 @@ try {
 
 <div class="container-fluid">
     <h1>Cart</h1>
+    
     <?php
 
-        $ids = [];
+$ids = [];      
         echo("<form method='POST' class='form'><br>");
-       echo(" <div class='row row-cols-1 row-cols-md-5 g-4'>");
-        foreach($results as $index => $record){
-            echo("<div class='cart_item'>");
-           
-            echo("<div class='card bg-dark'>");
+       echo(" <div class='row row-cols-1 row-cols-md-5 g-4 '>");
+       
 
-            echo("<div class='card-header'>
-                        Cart items
-                    </div> ");
+          
+        foreach($results as $index => $record){
+           echo("<div class='card bg-dark'>");
+           echo("<div class='card-header card bg-dark'>
+           Cart items");
+           echo("</br>");
+            
             foreach($record as $column => $value){
                 if($column === 'id'){
                     $id = $value;
@@ -79,26 +81,18 @@ try {
             echo("<input type='submit' name='clear_all' value='Empty cart' class='delete_button'/>");
             
             echo("</div><br>");
-            echo("</div>");
-            echo("</div>");
-            echo("</div>");
+            echo("</div><br>");           
         }
-        echo("</form>")
+        echo("</div>");
+       
+        echo("</div></br>");
+        echo("</form>");
 
 ?>
 
 
                     
-                   
-
-                    
-
-
-
-
-
-
-
+                
 
 <?php
         if(isset($_POST["clear_all"])){
