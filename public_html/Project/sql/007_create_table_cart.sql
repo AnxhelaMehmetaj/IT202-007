@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS cart(
     product_id int,
     desired_quantity int,
     user_id int,
-    unit_cost INT,
+    unit_price INT,
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES Users(id),
