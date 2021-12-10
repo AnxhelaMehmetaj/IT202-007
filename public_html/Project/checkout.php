@@ -18,7 +18,6 @@ $noError = true;
 $query = "";
 $orderID =0;
 $redirect = "";
-$backupOrderID = 0;
 $productID = 0;
 $quantity=0;
 
@@ -108,17 +107,14 @@ if (!$hasError)
       }
       catch(PDOException $e){
         error_log("Error inserting items:  " . var_export($e, true));
-      }
-            
-                 
-                  
-      error_log("query worked");
+      }        
      
       echo var_export($stmt->errorInfo(), true);
-      
+      $redirect = "Location: view_order.php?id= ";
+      $redirect .= $orderID;
+      header($redirect);
+     
                 
-
-
                 }
 ?>
 
