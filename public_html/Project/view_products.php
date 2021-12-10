@@ -53,7 +53,7 @@ if (isset($_POST["save"])) {
                 <form method="POST">
                     <div class="form-group">
                       
-                         Quantity: <input type="number" min="0" name="desired_quantity" value="?>"/>
+                         Quantity: <input type="number" min="0" name="desired_quantity" value=""/>
                     </div>
                 
 

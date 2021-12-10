@@ -15,6 +15,9 @@ $productID = 0;
 $results = [];
 $quantity = 0;
 $subtotal = 0;
+$has_error=false;
+
+ 
 
 if (isset($_POST["query"])) {
     $query = $_POST["query"];
@@ -23,7 +26,7 @@ if (isset($_POST["query"])) {
 ?>
 <?php   
     if(isset($_POST["save"])) {
-        $quantity = (int)$_POST["desired_quantity"];
+        $quantity = (int)$_POST["quantity"];
         if($quantity == 0) {
             $cartID = $_POST["id"];
             $db = getDB();
@@ -48,7 +51,11 @@ if (isset($_POST["query"])) {
     }
     
     $db = getDB();
-    $stmt = $db->prepare("SELECT cart.unit_price, name, product_id, cart.id, cart.desired_quantity From cart JOIN products on cart.product_id = products.id where cart.user_id=:user_id LIMIT 10");
+    $stmt = $db->prepare("SELECT cart.unit_price as cart_price, name, product_id,   products.unit_price as product_price, cart.id, cart.desired_quantity, products.stock From
+      cart JOIN products on cart.product_id = products.id where cart.user_id=:user_id LIMIT 10");
+    
+    
+    
     $r = $stmt->execute([":user_id"=> $userID,]);
     if ($r) {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -56,7 +63,9 @@ if (isset($_POST["query"])) {
     else {
         flash("There was a problem fetching the results " . var_export($stmt->errorInfo(), true));
     }
-
+    
+    
+ 
 
 ?>
 
@@ -64,18 +73,36 @@ if (isset($_POST["query"])) {
 <div class="results">
     <?php if (count($results) > 0): ?>
             <?php foreach ($results as $r): ?>
-               <?php  $subtotal += ($r["unit_price"]*$r["desired_quantity"]); ?>
+               <?php  $subtotal += ($r["cart_price"]*$r["desired_quantity"]); ?>
                 <div class="card" style="width: 18rem;">
                 <div class="card-body">
                 <h5 class="card-title"><?php echo($r["name"]); ?></h5>
-                <div>Price: <?php echo(($r["unit_price"]* $r["desired_quantity"])); ?></div>
-                <div><?php echo($r["desired_quantity"]); ?></div>
+                <div>Price: <?php echo(($r["cart_price"]* $r["desired_quantity"])); ?></div>
+                <div>Desired_quantity: <?php echo($r["desired_quantity"]); ?></div>
+                
+                <?php if ($r["cart_price"] != $r["product_price"] ): ?>
+                    <?php flash("Quantity of price changed!");
+                    $has_error = true; 
+                    endif; ?>
+                     
+
+
                 </div>
                 <form method="POST">
                 <div class="form-group">
                     <label>Quantity</label>
-                    <input type="number" min="0" name="desired_quantity" value="<?php echo $r["desired_quantity"]; ?>"/>
-                    <input type="submit" name="save" value="Update Quantity"/>
+                    <input type="number" min="0" name="quantity" value="<?php echo $r["desired_quantity"]; ?>"/>
+                   
+                   
+                    <?php if ($r["stock"] < $r["desired_quantity"]) : ?>
+                    <?php flash("Quantity of " . $r["name"] . " too high, please enter a lower quantity");
+                    $has_error = true; 
+                    endif; ?>
+                    
+                   
+                   
+                
+                <input type="submit" name="save" value="Update Quantity"/>
                     <input type="hidden" name="product_id" value="<?php echo $r["product_id"]; ?>"/>  
                     <input type="hidden" name="id" value="<?php echo $r["id"]; ?>"/>
                 </div>
@@ -88,13 +115,19 @@ if (isset($_POST["query"])) {
                 </form>
                     
             <?php endforeach; ?>
-           <div>    
-            <a type="button" href="checkout.php">Checkout</a>
-            </div>
+          
         </div>
         <div class="card" style="width: 18rem;">
                 <div class="card-body">
                 <h5 class="card-title">Subtotal:<?php echo($subtotal); ?></h5>
+                <input type="hidden" name="pquantity" value="<?php echo $r["desired_quantity"]; ?>"/>
+        <input type="hidden" name="stock" value="<?php echo $r["stock"]; ?>"/>
+        <div>    
+            <?php if (!$has_error) :?>
+            <a type="button" href="checkout.php">Checkout</a> <?php else: ?>
+                <a type="button" href="#">Checkout</a>     
+            <?php endif;  ?>
+            </div>
         </div> </div> </div>
         <form method="POST">
             <div class="form-group">

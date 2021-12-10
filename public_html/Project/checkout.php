@@ -14,8 +14,14 @@ $results = [];
 $subtotal = 0;
 $address = "";
 $paymentMethod = 0;
-$hasError = true;
-error_log("Loaded page");
+$noError = true;
+$query = "";
+$orderID =0;
+$redirect = "";
+$backupOrderID = 0;
+$productID = 0;
+$quantity=0;
+
 $db = getDB();
 $stmt = $db->prepare("SELECT cart.unit_price, name, product_id, cart.id, cart.desired_quantity From cart JOIN products on cart.product_id = products.id where cart.user_id=:user_id LIMIT 10");
 $r = $stmt->execute([":user_id" => $userID,]);
@@ -70,7 +76,8 @@ if (isset($_POST["paymenttype"])) {
     }
 }
 
-if (!$hasError) { //don't need to check again if you swap how the boolean works
+if (!$hasError) 
+{ //don't need to check again if you swap how the boolean works
     // this is likely longer than your db column $address= $_POST["firstname"]. " " . $_POST["email"]. " ". $_POST["address"]. " ". $_POST["city"]. " ". $_POST["state"]. " ". $_POST["zip"];
     error_log("No error post: " . var_export($_POST, true));
     $address = $_POST["address"] . ", " . $_POST["city"] . ", " . $_POST["state"] . ", " . $_POST["zip"];
@@ -78,27 +85,47 @@ if (!$hasError) { //don't need to check again if you swap how the boolean works
     $paymentMethod = $_POST["paymenttype"];
 
     $stmt = $db->prepare("INSERT into orders(user_id, total_price, payment_method, address) VALUES (:userID, :price, :pmethod, :addr)");
-    try {
+   
         $r = $stmt->execute([
             ":userID" => $userID,
             ":addr" => $address,
             ":pmethod" => $paymentMethod,
             ":price" => $subtotal
         ]);
-    } catch (PDOException $e) {
-        error_log("Error saving order: " . var_export($e, true));
-    }
-} else {
-    error_log("Had some error");
-}
+    
+
+        $db = getDB();
+        $orderID = $db->lastInsertId();
+        echo var_export($stmt->errorInfo(), true);
+  
+        $stmt = $db->prepare("INSERT into OrderItems (product_id, user_id, quantity, unit_price, order_id) 
+         SELECT product_id, user_id, desired_quantity, unit_price, :order_id FROM cart where user_id = :userID");
+      try{
+        $r = $stmt->execute([
+          ":userID" => $userID,
+          ":order_id" => $orderID
+      ]);
+      }
+      catch(PDOException $e){
+        error_log("Error inserting items:  " . var_export($e, true));
+      }
+            
+                 
+                  
+      error_log("query worked");
+     
+      echo var_export($stmt->errorInfo(), true);
+      
+                
 
 
+                }
 ?>
 
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form method="$_POST">
+      <form method="POST">
       
         <div class="row">
           <div class="col-50">
@@ -115,15 +142,15 @@ if (!$hasError) { //don't need to check again if you swap how the boolean works
             <div class="row">
               <div class="col-50">
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY">
+                <input type="text" id="state" name="state" placeholder="NY" minlength="2" maxlength="2">
               </div>
               <div class="col-50">
                 <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001">
+                <input type="text" id="zip" name="zip" placeholder="10001" minlength="5" maxlength="5">
               </div>
             </div>
           </div>
-</form>
+
     
         <div class="col-50">
             <h3>Payment</h3>
@@ -134,22 +161,9 @@ if (!$hasError) { //don't need to check again if you swap how the boolean works
               <i class="fa fa-cc-mastercard" style="color:red;"></i>
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
-          <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="paymenttype" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-              </div>
-            </div> 
+          
+            <label for="ccnum">Payment Type</label>
+            <input type="text" id="ccnum" name="paymenttype" placeholder="cash,credit,debit">
           </div>
           
         
@@ -164,7 +178,7 @@ if (!$hasError) { //don't need to check again if you swap how the boolean works
      
     <?php if (count($results) > 0): ?>
             <?php foreach ($results as $r): ?>
-               <?php  $subtotal += ($r["unit_price"]*$r["desired_quantity"]); ?>
+               <?php  $subtotal += ($r["unit_price"]* $r["desired_quantity"]); ?>
                
       
       <div class="card" style="width: 18rem;">
@@ -178,10 +192,11 @@ if (!$hasError) { //don't need to check again if you swap how the boolean works
       </div>
       <?php endforeach; ?>
       <?php endif; ?>
-            
+            <input type="hidden" name="subtotal" value="<?php echo($subtotal);?>"/>
       <h2>Total <span class="price" style="color:black"><b><?php echo($subtotal); ?></b></span></h2>
     </div>
   </div>
+  </form>
 </div>
 
 

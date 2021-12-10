@@ -95,16 +95,9 @@ if (empty($_POST["zipCode"])){
 } }
 
 
-if(isset($_POST["cquantity"]) && isset ($_POST["pquantity"])) {
-    $quantity = $_POST["cquantity"]; 
-    $pquantity = $_POST["pquantity"];
-    if ($quantity > $pquantity) {
-        flash ("One of Your Items has too high a quantity");
-        $noError = false;
-    }
 
 
-}
+
 
 
 if(isset($_POST["quantity"])) {
@@ -160,7 +153,7 @@ if(isset($_POST["quantity"])) {
                     $query .= "(:userID, :price$index, :pid$index, :oid, :quantity$index )";
                     $params[":pid$index"] = $result["product_id"];
                     $params[":quantity$index"] = $result["quantity"];
-                    $params[":price$index"] = $result["price"];
+                    $params[":price$index"] = $result["unit_price"];
                    }
            $params[":oid"] = $orderID;
            $params[":userID"] = $userID;
@@ -178,6 +171,7 @@ if(isset($_POST["quantity"])) {
             ":newQuantity"=>$newQuantity,
             ":productID"=>$result["product_id"]
         ]);  }
+       
         echo var_export($stmt->errorInfo(), true);
         $redirect = "Location: view_order.php?id=";
         $redirect .= $backupOrderID;
