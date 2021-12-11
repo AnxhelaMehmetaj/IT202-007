@@ -131,15 +131,23 @@ function get_url($dest)
     return $BASE_PATH . $dest;
 }
 
-function get_account_balance()
-{
-    if (is_logged_in() && isset($_SESSION["user"]["account"])) {
-        return (int)se($_SESSION["user"]["account"], "balance", 0, false);
+
+
+ 
+function redirect($path)
+{ //header headache
+    //https://www.php.net/manual/en/function.headers-sent.php#90160
+    /*headers are sent at the end of script execution otherwise they are sent when the buffer reaches it's limit and emptied */
+    if (!headers_sent()) {
+        //php redirect
+        die(header("Location: " . get_url($path)));
     }
-    return 0;
+    //javascript redirect
+    echo "<script>window.location.href='" . get_url($path) . "';</script>";
+    //metadata redirect (runs if javascript is disabled)
+    echo "<noscript><meta http-equiv=\"refresh\" content=\"0;url=" . get_url($path) . "\"/></noscript>";
+    die();
 }
-
-
 
 function get_columns($table)
 {
@@ -231,28 +239,7 @@ function inputMap($fieldType)
     }
     return "text"; //default
 }
-function add_item($item_id, $user_id, $quantity = 1)
-{
-    error_log("add_item() Item ID: $item_id, User_id: $user_id, Quantity $quantity");
-    //I'm using negative values for predefined items so I can't validate >= 0 for item_id
-    if (/*$item_id <= 0 ||*/$user_id <= 0 || $quantity === 0) {
-        
-        return;
-    }
-    $db = getDB();
-    $stmt = $db->prepare("INSERT INTO product_Inventory (item_id, user_id, quantity) VALUES (:iid, :uid, :q) ON DUPLICATE KEY UPDATE quantity = quantity + :q");
-    try {
-        //if using bindValue, all must be bind value, can't split between this an execute assoc array
-        $stmt->bindValue(":q", $quantity, PDO::PARAM_INT);
-        $stmt->bindValue(":iid", $item_id, PDO::PARAM_INT);
-        $stmt->bindValue(":uid", $user_id, PDO::PARAM_INT);
-        $stmt->execute();
-        return true;
-    } catch (PDOException $e) {
-        error_log("Error adding $quantity of $item_id to user $user_id: " . var_export($e->errorInfo, true));
-    }
-    return false;
-}
+
 function paginate($query, $params = [], $per_page = 10)
 {
     global $page; //will be available after function is called
@@ -284,4 +271,9 @@ function persistQueryString($page)
 {
     $_GET["page"] = $page;
     return http_build_query($_GET);
+
 }
+
+
+
+
