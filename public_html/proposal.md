@@ -274,9 +274,6 @@
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/144545590-331798a6-dc44-467c-9f9e-8799914afc3a.png)
         - Screenshot #1 empty button to empty the card 
 
-- Milestone 3
-
-
 
 - Milestone 3
 
@@ -287,46 +284,61 @@
 ## Website Link: https://am2997-prod.herokuapp.com/Project/home.php
 ## Your Name: Anxhela Mehmetaj
 
-- [ ] (11/18/2021 of completion) User will be able to purchase items in their Cart
+- [x] (11/18/2021 of completion) User will be able to purchase items in their Cart
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/145666133-b80c2426-f0cd-4e54-84dd-2f793103956e.png)
+        - Screenshot #1 Order table 
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/45404657/145666364-2ab0ff54-9f0c-4c0b-87b4-891fb5f4f44a.png)
+        - Screenshot #2 Order Items table 
+      - Screenshot #3 ![image](https://user-images.githubusercontent.com/45404657/145666394-1d500802-0e09-4253-b6b3-30b927cd8bc0.png)
+        - Screenshot #3 Calculate Cart Items
+      - Screenshot #4 ![image](https://user-images.githubusercontent.com/45404657/145666474-3ab8484c-9c0c-4f7a-a2b8-0a5fdedfdc6a.png)
+        - Screenshot #4 User will be asked for their Address for shipping purposes
+      - Screenshot #5 ![image](https://user-images.githubusercontent.com/45404657/145666563-9a5cb790-bd61-45cd-89f4-4a9c8bbf9428.png)
+        - Screenshot #5 Current product price against the Products table
+      - Screenshot #6 ![image](https://user-images.githubusercontent.com/45404657/145666827-11aa5e2f-e3a0-45c4-96ab-6e25835666cc.png)
+        - Screenshot #6 Users can’t purchase more than what’s in stock
+      - Screenshot #7 ![image](https://user-images.githubusercontent.com/45404657/145666927-f0377cd3-f1b1-41f9-a5b7-f7f2ad793b83.png)
+        - Screenshot #7 Make an entry into the Orders table
+      - Screenshot #8 ![image](https://user-images.githubusercontent.com/45404657/145667025-ee4c4bff-9b4a-451d-b43e-a2233d93bcb5.png)
+        - Screenshot #8 Redirect user to Order Confirmation Page
 
-- [ ] (11/18/2021 of completion) Order Confirmation Page
+
+- [x] (11/18/2021 of completion) Order Confirmation Page
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/145667148-e86c79f5-09d8-4f2f-9c5a-a449f974fd6b.png)
+        - Screenshot #1 Displays a Thank you message
 
-- [ ] (11/18/2021 of completion) User will be able to see their Purchase History
+
+- [x] (11/18/2021 of completion) User will be able to see their Purchase History
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/145667181-baa2e550-1133-429a-848a-8fc52a3bb0ac.png)
+        - Screenshot #1 Purchase History
 
-- [ ] (11/18/2021 of completion) Store Owner will be able to see all Purchase History
+- [x] (11/18/2021 of completion) Store Owner will be able to see all Purchase History
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/145667181-baa2e550-1133-429a-848a-8fc52a3bb0ac.png)
+        - Screenshot #1  Store Owner will be able to see all Purchase History
 
 - Milestone 4
 ### Intructions
