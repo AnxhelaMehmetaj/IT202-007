@@ -338,7 +338,7 @@
       - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/145667181-baa2e550-1133-429a-848a-8fc52a3bb0ac.png)
-        - Screenshot #1  Store Owner will be able to see all Purchase History
+      - Screenshot #1  Store Owner will be able to see all Purchase History
 
 - Milestone 4
 ### Intructions
