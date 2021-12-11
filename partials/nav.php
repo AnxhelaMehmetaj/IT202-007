@@ -69,7 +69,8 @@ require_once(__DIR__ . "/../lib/functions.php");
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/add_item.php'); ?>">Create</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/list_items.php'); ?>">List</a></li>
-                       
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/list_order.php'); ?>">Orders</a></li>
+
                 
                         </ul>
                     </li>

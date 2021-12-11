@@ -14,12 +14,11 @@ $results = [];
 $subtotal = 0;
 $address = "";
 $paymentMethod = 0;
-$noError = true;
-$query = "";
+$hasError = false;
 $orderID =0;
-$redirect = "";
-$productID = 0;
-$quantity=0;
+
+
+
 
 $db = getDB();
 $stmt = $db->prepare("SELECT cart.unit_price, name, product_id, cart.id, cart.desired_quantity From cart JOIN products on cart.product_id = products.id where cart.user_id=:user_id LIMIT 10");
@@ -33,7 +32,7 @@ if ($r) {
 
 if (isset($_POST["firstname"])) {
     if (empty($_POST["firstname"])) {
-        $hasError = false;
+        $hasError = true;
         flash("There was a problem with Firstname");
     }
 }
@@ -75,7 +74,7 @@ if (isset($_POST["paymenttype"])) {
     }
 }
 
-if (!$hasError) 
+if (count($_POST) > 0 && !$hasError) 
 { //don't need to check again if you swap how the boolean works
     // this is likely longer than your db column $address= $_POST["firstname"]. " " . $_POST["email"]. " ". $_POST["address"]. " ". $_POST["city"]. " ". $_POST["state"]. " ". $_POST["zip"];
     error_log("No error post: " . var_export($_POST, true));
@@ -94,9 +93,10 @@ if (!$hasError)
     
 
         $db = getDB();
+
         $orderID = $db->lastInsertId();
-        echo var_export($stmt->errorInfo(), true);
-  
+      
+     
         $stmt = $db->prepare("INSERT into OrderItems (product_id, user_id, quantity, unit_price, order_id) 
          SELECT product_id, user_id, desired_quantity, unit_price, :order_id FROM cart where user_id = :userID");
       try{
@@ -104,19 +104,26 @@ if (!$hasError)
           ":userID" => $userID,
           ":order_id" => $orderID
       ]);
+     
+      
+    
       }
       catch(PDOException $e){
         error_log("Error inserting items:  " . var_export($e, true));
       }        
      
       echo var_export($stmt->errorInfo(), true);
-      $redirect = "Location: view_order.php?id= ";
-      $redirect .= $orderID;
-      header($redirect);
-     
-                
-                }
-?>
+      redirect("view_order.php?id=$orderID");
+          
+    }
+
+
+
+
+
+
+
+              ?>
 
 <div class="row">
   <div class="col-75">
