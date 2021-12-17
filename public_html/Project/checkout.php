@@ -81,7 +81,6 @@ if (count($_POST) > 0 && !$hasError)
     $address = $_POST["address"] . ", " . $_POST["city"] . ", " . $_POST["state"] . ", " . $_POST["zip"];
     $subtotal = $_POST["subtotal"];
     $paymentMethod = $_POST["paymenttype"];
-    
 
     $stmt = $db->prepare("INSERT into orders(user_id, total_price, payment_method, address) VALUES (:userID, :price, :pmethod, :addr)");
    
@@ -105,6 +104,9 @@ if (count($_POST) > 0 && !$hasError)
           ":userID" => $userID,
           ":order_id" => $orderID
       ]);
+     
+      
+    
       }
       catch(PDOException $e){
         error_log("Error inserting items:  " . var_export($e, true));
