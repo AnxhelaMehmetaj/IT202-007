@@ -60,6 +60,8 @@ if (isset($_POST["state"])) {
     flash("There was a problem with state");
   }
 }
+
+
 if (isset($_POST["zip"])) {
   if (empty($_POST["zip"])) {
     $hasError = true;

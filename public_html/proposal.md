@@ -275,6 +275,7 @@
         - Screenshot #1 empty button to empty the card 
 
 
+
 - Milestone 3
 
 # Project Name: simple shop
