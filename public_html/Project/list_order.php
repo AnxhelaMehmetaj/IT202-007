@@ -9,17 +9,17 @@ if (!is_logged_in()) {
 ?>
 <?php
 
-
-$results = [];
-$orderitems_results = [];
 $db = getDB();
-$sql_str = "";
-if (has_role("Admin")) {
-    $sql_str = "SELECT id, user_id, total_price, created, payment_method, address FROM orders WHERE user_id = :user_id OR NOT user_id = :user_id LIMIT 10";
+$results = [];
+
+
+$query = "";
+if (has_role("Owner")) {
+    $query = "SELECT * FROM orders WHERE user_id = :user_id OR NOT user_id = :user_id LIMIT 10";
 } else {
-    $sql_str = "SELECT id, user_id, total_price, created, payment_method, address FROM orders WHERE user_id = :user_id LIMIT 10";
+    $query = "SELECT * FROM orders WHERE user_id = :user_id LIMIT 10";
 }
-$stmt = $db->prepare($sql_str);
+$stmt = $db->prepare($query);
 try {
     $stmt->execute([":user_id" => $_SESSION["user"]["id"]]);
     $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
