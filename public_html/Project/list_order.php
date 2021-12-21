@@ -11,8 +11,6 @@ if (!is_logged_in()) {
 
 $db = getDB();
 $results = [];
-
-
 $query = "";
 if (has_role("Owner")) {
     $query = "SELECT * FROM orders WHERE user_id = :user_id OR NOT user_id = :user_id LIMIT 10";
@@ -38,9 +36,9 @@ foreach ($results as $index => $value) : ?>
         <br>Order <?php echo $value["id"] ?> 
         <div> Date and time <?php echo $value["created"] ?> </div>
          Total price: <?php echo $value["total_price"] ?>
-        <br>Payment Method: <?php echo $value["payment_method"]?>
-        <br>Address: <?php echo$value["address"] ?>
-        <br><a href="view_order.php?id= <?php echo $value["id"] ?> ">Order Info</a>
+        <div>Payment Method: <?php echo $value["payment_method"]?> </div>
+        Address: <?php echo$value["address"] ?>
+        <div><a href="view_order.php?id= <?php echo $value["id"] ?> ">Order Info</a> </div>
     </div><br>
 
 <?php endforeach; ?>
