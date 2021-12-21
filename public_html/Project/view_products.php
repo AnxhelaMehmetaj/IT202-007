@@ -50,10 +50,9 @@ if (isset($productID) && $productID > 0) {
             flash("<pre>" . var_export($e, true) . "</pre>");
             error_log("rating lookup error: " . var_export($e, true));
         }
+
     }
 }
-
-
 
 $unit_price = $result["unit_price"];
 $product_name = $result["name"];
@@ -84,6 +83,8 @@ if (isset($_POST["submit"]) && isset($_POST["rating"]) && isset($_POST["comment"
         error_log("rating error: " . var_export($e, true));
     }
 }
+
+
 
 ?>
 
@@ -149,11 +150,14 @@ if (isset($_POST["submit"]) && isset($_POST["rating"]) && isset($_POST["comment"
                     <div>Rating: <?php echo ($r["rating"]); ?></div>
                     <div>Comment: <?php echo ($r["comment"]); ?></div>
                 </div>
+             
             </div>
+          
         <?php endforeach; ?>
     <?php endif; ?>
 
 </div>
+<?php include(__DIR__ . "/../../partials/pagination.php"); ?>
 
 
 <?php

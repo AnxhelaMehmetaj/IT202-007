@@ -69,7 +69,7 @@ input, select {
 }
 
 input[type=submit] {
-    width: 40%;
+    width: 100%;
     background-color: #49729e;
     color: white;
     padding: 2px 4px;
@@ -199,7 +199,7 @@ input[type=submit] {
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  max-width: 400px;
   padding: 10px;
   background-color: white;
 }
