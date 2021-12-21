@@ -1,10 +1,13 @@
 <?php
 require(__DIR__ . "/../../../partials/nav.php"); ?>
 
-<?php
-if (!is_logged_in()) {
-    flash("You must be logged in to access this page");
-    die(header("Location: login.php"));
+
+if (!has_role("Admin")) {
+    flash("You don't have permission to access this page");
+    die(header("Location: ../../login.php"));
+
+
+
 }
 
 ?>

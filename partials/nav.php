@@ -46,6 +46,8 @@ require_once(__DIR__ . "/../lib/functions.php");
                 <?php if (!is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('register.php'); ?>">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Register</a></li>
+
                     
                 <?php endif; ?>
                 <li class="nav-item"><a class="nav-link" href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
@@ -77,6 +79,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                    
                 <?php endif; ?>
                 <?php if (is_logged_in()) : ?>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('list_order.php'); ?>"> Users order</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
 
                     <li class="show-cart"><a href="<?php echo get_url("add_to_cart.php");?>">Cart</a></li>
