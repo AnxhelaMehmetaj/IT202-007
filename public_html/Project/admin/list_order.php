@@ -37,28 +37,31 @@ $db = getDB();
     <div class="results">
         <?php if (count($results) > 0): ?>
                 <?php foreach ($results as $r): ?>
-                    <div class="card" style="width: 18rem;">
+             <div class="card" style="width: 18rem;">
                     <div class="card-body">
                     <h5 class="card-title">Order Number : <?php echo($r["id"]); ?></h5>
                     </div>
                         <div>
                             <a type="button" href="view_order.php?id=<?php echo($r['id']); ?>">View Order</a>
                         </div>
+                        </div>
                 <?php endforeach; ?>
-               
-            </div>
+              
+                   
             <div class="card" style="width: 18rem;">
-                    <div class="card-body">
+                <div class="card-body">
                     <h5 class="card-title">Total Price:<?php echo($r["total_price"]); ?></h5>
-            </div> </div> </div>
-            <form method="POST">
+                </div> 
+            </div> 
+           
+               <form method="POST">
                 <div class="form-group">
                 <input type="submit" name="clearAll" value="Empty Cart"/>
                 </form>
 
-                <?php endif; ?>
-                
-
+        <?php endif; ?>
+        </div>
+                </div>
                 <?php
 require(__DIR__ . "/../../../partials/flash.php");
 ?>
