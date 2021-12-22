@@ -136,7 +136,7 @@ if (isset($_POST["submit"]) && isset($_POST["rating"]) && isset($_POST["comment"
     <?php if (isset($rate) && !empty($rate)) : ?>
 
         <?php foreach ($rate as $rating) : ?>
-            <h3> Average rating: <?php echo round($rating["Avgrate"],1); ?></h3>
+            <h3> Average rating: <?php echo $rating["Avgrate"]; ?></h3>
         <?php endforeach; ?>
     <?php endif; ?>
 

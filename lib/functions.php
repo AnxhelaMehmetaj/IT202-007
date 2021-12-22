@@ -240,7 +240,7 @@ function inputMap($fieldType)
     return "text"; //default
 }
 
-function paginate($query, $params = [], $per_page = 3)
+function paginate($query, $params = [], $per_page = 10)
 {
     global $page; //will be available after function is called
     try {

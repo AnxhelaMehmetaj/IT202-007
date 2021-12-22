@@ -7,7 +7,7 @@ $outofstock = '';
 //Sort and Filters
 $col = se($_GET, "col", "unit_price", false);
 //allowed list
-if (!in_array($col, ["unit_price", "stock", "name", "created", "outofstock"])) {
+if (!in_array($col, ["unit_price", "stock", "name", "created"])) {
     $col = "unit_price"; //default value, prevent sql injection
 }
 $order = se($_GET, "order", "asc", false);
@@ -35,7 +35,7 @@ if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
 }
 //paginate function
-$per_page = 3;
+$per_page = 10;
 paginate($total_query . $query, $params, $per_page);
 $query .= " LIMIT :offset, :count";
 $params[":offset"] = $offset;
