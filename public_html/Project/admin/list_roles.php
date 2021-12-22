@@ -38,13 +38,14 @@ try {
         $roles = $results;
     } else {
         flash("No matches found", "warning");
+
     }
 } catch (PDOException $e) {
     flash(var_export($e->errorInfo, true), "danger");
 }
 
 ?>
-<div class="container-fluid">
+<div class="container">
     <h1>List Roles</h1>
     <form method="POST" class="row row-cols-lg-auto g-3 align-items-center">
         <div class="input-group mb-3">
@@ -52,9 +53,9 @@ try {
             <input class="btn btn-primary" type="submit" value="Search" />
         </div>
     </form>
-    <table class="table text-light">
-        <thead>
-            <th>ID</th>
+    <table class="table"  >
+        <thead style="color: black;">
+            <th >ID</th>
             <th>Name</th>
             <th>Description</th>
             <th>Active</th>
