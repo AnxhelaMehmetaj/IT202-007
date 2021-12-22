@@ -3,10 +3,11 @@ require(__DIR__ . "/../../partials/nav.php");
 
 $results = [];
 $db = getDB();
+$outofstock = '';
 //Sort and Filters
 $col = se($_GET, "col", "unit_price", false);
 //allowed list
-if (!in_array($col, ["unit_price", "stock", "name", "created"])) {
+if (!in_array($col, ["unit_price", "stock", "name", "created", "outofstock"])) {
     $col = "unit_price"; //default value, prevent sql injection
 }
 $order = se($_GET, "order", "asc", false);
@@ -14,6 +15,7 @@ $order = se($_GET, "order", "asc", false);
 if (!in_array($order, ["asc", "desc"])) {
     $order = "asc"; //default value, prevent sql injection
 }
+
 $name = se($_GET, "name", "", false);
 
 //split query into data and total
@@ -27,6 +29,7 @@ if (!empty($name)) {
     $query .= " AND name like :name";
     $params[":name"] = "%$name%";
 }
+
 //apply column and order sort
 if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
@@ -59,16 +62,16 @@ try {
 
 <div class="container-fluid">
     <h1>Shop</h1>
-    <form class="row row-cols-auto g-3 align-items-center">
-        <div class="col">
-            <div class="input-group">
+    <form class="row row-cols-auto g-3 align-items-center" style="width:fit-content">
+        <div class="col" style="width:fit-content">
+            <div class="input-group" style="width:fit-content">
                 <div class="input-group-text">Name</div>
                 <input class="form-control" name="name" value="<?php se($name); ?>" />
             </div>
         </div>
-        <div class="col">
-            <div class="input-group">
-                <div class="input-group-text">Sort</div>
+        <div class="col" style="width:fit-content">
+            <div class="input-group" style="width:fit-content">
+                <div class="input-group-text" style="width:fit-content">Sort</div>
                 <!-- make sure these match the in_array filter above-->
 
                 <select class="form-control" name="col" value=" ?>">
@@ -76,6 +79,8 @@ try {
                     <option value="stock">Stock</option>
                     <option value="name">Name</option>
                     <option value="created">Created</option>
+                
+
                 </select>
                 <script>
                     //quick fix to ensure proper value is selected since
@@ -92,41 +97,42 @@ try {
                     document.forms[0].order.value = "<?php se($order); ?>";
                 </script>
             </div>
+           
         </div>
         <div class="col">
-           <div class="input">
+            <div class="input">
                 <input type="submit" class="btn btn-primary" value="Apply" />
-                </div>
+            </div>
         </div>
     </form>
 
     <div class="row row-cols-1 row-cols-md-5 g-4">
-    <?php foreach ($results as $r): ?>
-        
-                <div class="card">
-                    <div>
-                        <div>Name:</div>
-                        <div><?php echo($r["name"]); ?></div>
-                    </div>
-                    <div>
-                        <div>Price:</div>
-                        <div><?php echo($r["unit_price"]); ?></div>
-                    </div>
-                    <div>
-                        <div>Quantity:</div>
-                        <div><?php echo($r["stock"]); ?></div>
-                    </div>
-                    <div>
-                        <div>Description:</div>
-                        <div><?php echo($r["description"]); ?></div>
-                    </div>
-                    <div>
-                       
-                        <a type="button" href="view_products.php?id=<?php echo($r['id']); ?>">View</a>
-                    </div>
+        <?php foreach ($results as $r) : ?>
+
+            <div class="card">
+                <div>
+                    <div>Name:</div>
+                    <div><?php echo ($r["name"]); ?></div>
                 </div>
-  
-            <?php endforeach; ?>
+                <div>
+                    <div>Price:</div>
+                    <div><?php echo ($r["unit_price"]); ?></div>
+                </div>
+                <div>
+                    <div>Quantity:</div>
+                    <div><?php echo ($r["stock"]); ?></div>
+                </div>
+                <div>
+                    <div>Description:</div>
+                    <div><?php echo ($r["description"]); ?></div>
+                </div>
+                <div>
+
+                    <a type="button" href="view_products.php?id=<?php echo ($r['id']); ?>">View</a>
+                </div>
+            </div>
+
+        <?php endforeach; ?>
     </div>
     <!-- this will be moved into a partial file for reusability-->
     <?php include(__DIR__ . "/../../partials/pagination.php"); ?>
