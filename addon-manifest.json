@@ -1,0 +1,21 @@
+{
+  "id": "prod-sample",
+  "api": {
+    "config_vars_prefix": "PROD_SAMPLE",
+    "config_vars": [
+      "PROD_SAMPLE_URL"
+    ],
+    "password": "CHANGEME",
+    "sso_salt": "CHANGEME",
+    "regions": [
+      "us"
+    ],
+    "requires": [],
+    "production": {
+      "base_url": "https://myaddon.com/heroku/resources",
+      "sso_url": "https://myaddon.com/sso/login"
+    },
+    "version": "3"
+  },
+  "name": "prod-sample"
+}
