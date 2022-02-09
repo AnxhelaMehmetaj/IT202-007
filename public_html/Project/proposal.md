@@ -341,7 +341,87 @@
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/145667181-baa2e550-1133-429a-848a-8fc52a3bb0ac.png)
       - Screenshot #1  Store Owner will be able to see all Purchase History
 
+
+
+
+
 - Milestone 4
+
+[x] (12/21/2021 of completion) User can set their profile to be public or private (will need another column in Users table)
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/147039631-c285ee14-bfea-4f9f-ae6e-a65a83150a84.png)
+      - Screenshot #1  profile
+
+[x] (12/21/2021 of completion) User will be able to rate a product they purchased
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/147039752-fbb735f0-27f8-44fd-bf98-1adf37453b04.png)
+      - Screenshot # rating
+      
+
+[x] (12/21/2021 of completion) User’s Purchase History Changes
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/147039845-a2be5dc9-188f-4960-8709-e82760b56e2c.png) 
+      - Screenshot #1 users purchase filters
+
+
+[x] (12/21/2021 of completion) Store Owner Purchase History Changes
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+   - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/147039845-a2be5dc9-188f-4960-8709-e82760b56e2c.png) 
+      - Screenshot #1 
+
+
+[x] (12/21/2021 of completion) Add pagination to Shop Page 
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/147040042-49188f74-13ba-4623-854d-b94a8506ae30.png)
+      - Screenshot #1 pagination added
+
+
+[x] (12/21/2021 of completion) Store Owner will be able to see all products out of stock
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/45404657/147040128-5f8822b6-3e4d-43db-be5f-1a087593e73b.png)
+      - Screenshot #1 out of stock products 
+
+
+[x] (12/21/2021 of completion) User can sort products by average rating on the Shop Page
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+        - Direct Link: https://am2997-prod.herokuapp.com/Project/shop.php 
+    - Pull Requests
+      - PR link #1 https://github.com/AnxhelaMehmetaj/IT202-007/pull/77
+    - Screenshots
+      - Screenshot #1 
+      - Screenshot #
+
 ### Intructions
 #### Don't delete this
 1. Pick one project type
