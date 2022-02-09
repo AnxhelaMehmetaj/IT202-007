@@ -40,7 +40,7 @@ reset_session();
 if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
     $password = se($_POST, "password", "", false);
     $confirm = se($_POST,"confirm","", false
-    );
+    ); 
     //TODO 3
     $hasError = false;
     if (empty($email)) {
