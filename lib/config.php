@@ -13,7 +13,7 @@ else{
     $db_url = parse_url($url);
     
 }
-var_dump($url);
+//var_dump($url);
 //attempts to handle a failure where parse_url doesn't parse properly (usually happens when special characters are included)
 if (!$db_url || count($db_url) === 0) {
     $matches;
