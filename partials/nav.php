@@ -33,17 +33,20 @@ require_once(__DIR__ . "/../lib/functions.php");
 <script src="helpers.js"></script>
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?php echo get_url('home.php'); ?>">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <?php if (is_logged_in()) : ?>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">   
+            <?php if (is_logged_in()) : ?>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo get_url('home.php'); ?>">Home</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
+
                 <?php endif; ?>
                 <?php if (!is_logged_in()) : ?>
+                    <li class="nav-item"> <a class="nav-link" href="<?php echo get_url('home.php'); ?>">Home</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('register.php'); ?>">Register</a></li>
                     
@@ -85,18 +88,11 @@ require_once(__DIR__ . "/../lib/functions.php");
 
 
                 <?php if (is_logged_in()) : ?>
-
-
-
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('list_order.php'); ?>"> Users order</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
-
-                    <li class="show-cart"><a href="<?php echo get_url("add_to_cart.php"); ?>">Cart</a></li>
+                    <li class="show-cart"><a class="nav-link" href="<?php echo get_url("add_to_cart.php"); ?>">Cart</a></li>
                 <?php endif; ?>
-
-
-
-            </ul>
+     </ul>
 
         </div>
     </div>

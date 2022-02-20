@@ -62,25 +62,23 @@ try {
 
 <div class="container-fluid">
     <h1>Shop</h1>
-    <form class="row row-cols-auto g-3 align-items-center" style="width:fit-content">
-        <div class="col" style="width:fit-content">
-            <div class="input-group" style="width:fit-content">
-                <div class="input-group-text">Name</div>
-                <input class="form-control" name="name" value="<?php se($name); ?>" />
+    <form class="row row-cols-auto g-3 align-items-center" >
+        <div class="col" >
+            <div class="input-group" >
+                <div class="input-group-text">Name
+               <input class="form-control" name="name" value="<?php se($name); ?>" />
+               </div>
             </div>
         </div>
-        <div class="col" style="width:fit-content">
-            <div class="input-group" style="width:fit-content">
-                <div class="input-group-text" style="width:fit-content">Sort</div>
+        <div class="col">
+            <div class="input-group" >
+              <div class="input-group-text">Sort
                 <!-- make sure these match the in_array filter above-->
-
                 <select class="form-control" name="col" value=" ?>">
                     <option value="unit_price">Unit Price </option>
                     <option value="stock">Stock</option>
                     <option value="name">Name</option>
                     <option value="created">Created</option>
-                
-
                 </select>
                 <script>
                     //quick fix to ensure proper value is selected since
@@ -97,12 +95,15 @@ try {
                     document.forms[0].order.value = "<?php se($order); ?>";
                 </script>
             </div>
+            </div>
            
         </div>
         <div class="col">
-            <div class="input">
+            <div class="input-group" >
+            
                 <input type="submit" class="btn btn-primary" value="Apply" />
             </div>
+            
         </div>
     </form>
 

@@ -1,43 +1,26 @@
-/*.alert-success {
-    background-color: green
-}
 
-.alert-warning {
-    background-color: yellow;
-}
-
-.alert-danger {
-    background-color: red;
-}
-
-.alert-info {
-    background-color: teal;
-}*/
-
-
-
-body{
-  color: white;
-  background-color: black;
+@media (min-width: 768px) {
+  body {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
 }
 nav li a,.navbar-brand{
-  /* see how you can use custom css variables from bootstrap
-  https://getbootstrap.com/docs/5.1/customize/css-variables/ */
-
-  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+text-shadow: -.5px -.5px 0 #000, -.5px -.5px 0 #000; 
 
 }
 .btn-primary{
-  background-color: var(--bs-orange);
   border: 1px solid black;
   color: black;
 }
-canvas{
-  background-color: white;
-}
+
 label{
   text-transform: capitalize;
 }
+
+
+
 
 .scroll-content{
   height: 70vh;
@@ -45,7 +28,7 @@ label{
 }
 
 body{
-    background-color: lightsalmon;
+    
     color: rgb(153, 0, 153);
     font-family: system;
     font-size: 1em;
