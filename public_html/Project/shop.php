@@ -64,12 +64,13 @@ try {
     <h1>Shop</h1>
     <form class="row row-cols-auto g-3 align-items-center" >
         <div class="col" >
-            <div class="input-group" >
-                <div class="input-group-text">Name
-               <input class="form-control" name="name" value="<?php se($name); ?>" />
+            <div class="input-group">
+               <div class="input-group-text">Name
+                <input class="form-control" name="name" value="<?php se($name); ?>" />
                </div>
             </div>
         </div>
+        
         <div class="col">
             <div class="input-group" >
               <div class="input-group-text">Sort
@@ -95,13 +96,14 @@ try {
                     document.forms[0].order.value = "<?php se($order); ?>";
                 </script>
             </div>
-            </div>
-           
+            </div> 
         </div>
+
+
+        
         <div class="col">
             <div class="input-group" >
-            
-                <input type="submit" class="btn btn-primary" value="Apply" />
+              <input type="submit" class="btn btn-primary" value="Apply" />
             </div>
             
         </div>
